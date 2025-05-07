@@ -18,7 +18,9 @@ spec:
     replicaSet:
       enabled: true
     usePassword: true
-    existingSecret: mongodb-secret
+    auth:
+      enabled: true
+      existingSecret: mongodb-secret
     service:
       type: ClusterIP
     resourcesArbiter:
