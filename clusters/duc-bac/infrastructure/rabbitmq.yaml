@@ -15,7 +15,9 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-    existingSecret: rabbitmq-secret
+    auth:
+      existingSecret: rabbitmq-secret
+      updatePassword: true
     service:
       type: ClusterIP
     resources:
