@@ -4,6 +4,7 @@ metadata:
   name: mongodb
   namespace: homework-3
 spec:
+  interval: 15m
   chart:
     spec:
       chart: mongodb
@@ -11,6 +12,7 @@ spec:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
+      interval: 15m
   values:
     replicaSet:
       enabled: true
