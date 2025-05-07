@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: bitnami
-        namespace: homework-3
+        namespace: flux-system
   values:
     replicaSet:
       enabled: true
