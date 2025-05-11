@@ -17,6 +17,7 @@ spec:
   values:
     auth:
       existingSecret: rabbitmq-secret
+      updatePassword: true
       existingPasswordSecret: rabbitmq-secret
       existingUsernameSecret: rabbitmq-secret
       usernameSecretKey: rabbitmq-username
