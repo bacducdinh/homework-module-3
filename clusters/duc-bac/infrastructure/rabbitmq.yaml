@@ -16,12 +16,12 @@ spec:
       interval: 5m
   values:
     auth:
-      existingSecret: rabbitmq-secret
-      updatePassword: true
       existingPasswordSecret: rabbitmq-secret
       existingUsernameSecret: rabbitmq-secret
       usernameSecretKey: rabbitmq-username
       passwordSecretKey: rabbitmq-password
+      existingErlangSecret: rabbitmq-secret
+      erlangSecretKey: rabbitmq-erlang-cookie
     service:
       type: ClusterIP
     resources:
