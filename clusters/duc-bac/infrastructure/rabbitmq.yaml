@@ -16,6 +16,7 @@ spec:
       interval: 5m
   values:
     auth:
+      existingSecret: rabbitmq-secret
       existingPasswordSecret: rabbitmq-secret
       existingUsernameSecret: rabbitmq-secret
       usernameSecretKey: rabbitmq-username
