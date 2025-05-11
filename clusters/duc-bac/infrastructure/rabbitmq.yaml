@@ -16,6 +16,7 @@ spec:
       interval: 15m
   values:
     auth:
+      updatePassword: true
       existingUsernameSecret: rabbitmq-secret
       usernameSecretKey: rabbitmq-username
       existingPasswordSecret: rabbitmq-secret
