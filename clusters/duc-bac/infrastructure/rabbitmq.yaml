@@ -15,12 +15,46 @@ spec:
         namespace: flux-system
       interval: 15m
   values:
-    auth:
-      username: user
-      # password: homework3
-      # erlangCookie: 3kKzAV2cYrJjB9L3fD3ZmNXNCBkg9q8D
-      existingPasswordSecret: rabbitmq-secret
-      existingErlangSecret: rabbitmq-secret
+    extraSecrets:
+      load-definition:
+        load_definition.json: |
+          {
+            "users": [
+              {
+                "name": "{{ .Values.auth.username }}",
+                "password": "{{ .Values.auth.password }}",
+                "tags": "administrator"
+              }
+            ],
+            "vhosts": [
+              {
+                "name": "/"
+              }
+            ],
+            "permissions":[
+              {
+                "configure":".*",
+                "read":".*",
+                "user":"{{ .Values.auth.username }}",
+                "vhost":"/",
+                "write":".*"
+              }
+            ],
+            "policies": [
+              {
+                "name": "ha-all",
+                "pattern": ".*",
+                "vhost": "/",
+                "definition": {
+                  "ha-mode": "all",
+                  "ha-sync-mode": "automatic"
+                }
+              }
+            ]
+          }
+    loadDefinition:
+      enabled: true
+      existingSecret: load-definition
     service:
       type: ClusterIP
       ports:
