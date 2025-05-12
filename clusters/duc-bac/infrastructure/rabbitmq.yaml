@@ -16,7 +16,6 @@ spec:
       interval: 15m
   values:
     auth:
-      enabled: true
       updatePassword: true
     extraSecrets:
       load-definition:
