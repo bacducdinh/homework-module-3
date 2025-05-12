@@ -16,14 +16,11 @@ spec:
       interval: 15m
   values:
     auth:
-      updatePassword: true
       username: user
       # password: homework3
       # erlangCookie: 3kKzAV2cYrJjB9L3fD3ZmNXNCBkg9q8D
       existingPasswordSecret: rabbitmq-secret
-      existingSecretPasswordKey: rabbitmq-password
       existingErlangSecret: rabbitmq-secret
-      existingSecretErlangKey: rabbitmq-erlang-cookie
     service:
       type: ClusterIP
       ports:
