@@ -17,12 +17,11 @@ spec:
   values:
     auth:
       updatePassword: true
-      existingUsernameSecret: rabbitmq-secret
-      usernameSecretKey: rabbitmq-username
+      username: user
       existingPasswordSecret: rabbitmq-secret
-      passwordSecretKey: rabbitmq-password
+      existingSecretPasswordKey: rabbitmq-password
       existingErlangSecret: rabbitmq-secret
-      erlangSecretKey: rabbitmq-erlang-cookie
+      existingSecretErlangKey: rabbitmq-erlang-cookie
     service:
       type: ClusterIP
       ports:
