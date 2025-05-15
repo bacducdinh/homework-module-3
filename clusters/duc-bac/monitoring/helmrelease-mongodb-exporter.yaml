@@ -14,6 +14,16 @@ spec:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
-  valuesFrom:
-    - kind: ConfigMap
-      name: mongodb-exporter-values
+  values:
+    mongodb:
+      uri: "mongodb://root:homework3@mongodb-headless.homework-3.svc.cluster.local:27017"
+    service:
+      port: 9216
+      type: ClusterIP
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 200m
+        memory: 256Mi
