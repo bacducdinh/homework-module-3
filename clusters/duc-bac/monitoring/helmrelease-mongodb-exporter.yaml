@@ -4,7 +4,7 @@ metadata:
   name: mongodb-exporter
   namespace: homework-3
 spec:
-  releaseName: mongodb-exporter
+  releaseName: homework-3-mongodb-exporter
   interval: 5m
   chart:
     spec:
