@@ -1,0 +1,19 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: mongodb-exporter
+  namespace: homework-3
+spec:
+  releaseName: mongodb-exporter
+  interval: 5m
+  chart:
+    spec:
+      chart: mongodb-exporter
+      version: "7.4.6" # hoặc phiên bản mới
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-system
+  valuesFrom:
+    - kind: ConfigMap
+      name: mongodb-exporter-values
