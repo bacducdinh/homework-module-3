@@ -8,7 +8,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: prometheus-mongodb-exporter
+      chart: mongodb-exporter
       version: "3.12.0"
       sourceRef:
         kind: HelmRepository
