@@ -17,9 +17,8 @@ spec:
   values:
     mongodb:
       uri: "mongodb://root:homework3@mongodb-headless.homework-3.svc.cluster.local:27017"
-    serviceMonitoring:
+    serviceMonitor:
       enabled: true
-      interval: 30s
       namespace: homework-3
       labels:
         release: kube-prometheus-stack
