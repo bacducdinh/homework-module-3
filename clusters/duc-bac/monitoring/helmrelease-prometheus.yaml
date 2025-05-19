@@ -22,6 +22,6 @@ spec:
     prometheus:
       prometheusSpec:
         serviceMonitorSelectorNilUsesHelmValues: false
-    nodeExporter:
-      enabled: true
-      hostRootFsMount: false
+    prometheus-node-exporter:
+      hostRootFsMount:
+        enabled: false
