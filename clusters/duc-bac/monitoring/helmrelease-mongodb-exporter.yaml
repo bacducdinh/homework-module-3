@@ -4,15 +4,15 @@ metadata:
   name: mongodb-exporter
   namespace: homework-3
 spec:
-  releaseName: homework-3-mongodb-exporter
+  releaseName: mongodb-exporter
   interval: 5m
   chart:
     spec:
-      chart: mongodb-exporter
+      chart: prometheus-mongodb-exporter
       version: "3.12.0"
       sourceRef:
         kind: HelmRepository
-        name: bitnami
+        name: prometheus-community
         namespace: flux-system
   values:
     mongodb:
@@ -27,4 +27,3 @@ spec:
       limits:
         cpu: 200m
         memory: 256Mi
-        #
