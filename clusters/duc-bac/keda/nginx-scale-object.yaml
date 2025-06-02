@@ -15,7 +15,7 @@ spec:
       metadata:
         serverAddress: http://kube-prometheus-stack-prometheus.homework-3.svc:9090
         metricName: nginx_http_requests_total
-        threshold: "50"
+        threshold: "20"
         query: |
           sum(rate(nginx_http_requests_total[1m]))
   #
