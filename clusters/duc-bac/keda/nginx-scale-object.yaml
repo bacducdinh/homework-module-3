@@ -18,3 +18,4 @@ spec:
         threshold: "50"
         query: |
           sum(rate(nginx_http_requests_total[1m]))
+  #

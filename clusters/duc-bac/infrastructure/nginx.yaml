@@ -17,9 +17,9 @@ spec:
       interval: 15m
   values:
     service:
-      enabled: true
-      type: ClusterIP
+      type: NodePort
       port: 80
+      nodePort: 30080
     metrics:
       enabled: true
       serviceMonitor:
